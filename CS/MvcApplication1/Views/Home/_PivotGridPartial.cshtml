@@ -1,0 +1,22 @@
+@using MvcApplication1.Helper
+
+
+@Html.DevExpress().PivotGrid(settings =>
+{
+    settings.Name = "pivotGrid";
+    settings.CallbackRouteValues = new { Controller = "Home", Action = "PivotGridPartial" };
+
+    settings.Fields.Add("Row", PivotArea.RowArea);
+    settings.Fields.Add("Column", PivotArea.ColumnArea);
+    settings.Fields.Add("Data", PivotArea.DataArea);
+    settings.ClientSideEvents.PopupMenuItemClick = "MenuItemClick";
+
+    PivotEventHelper.CustomizeContextMenu(settings);
+    PivotEventHelper.PassAllowedFieldsToClientSide(settings);
+    if (ViewData["fieldID"] != null && ViewData["fieldValueIndex"] != null) {
+        PivotEventHelper.HandleAfterPerformCallback(settings, (string)ViewData["fieldID"], Convert.ToInt32(ViewData["fieldValueIndex"]));
+        ViewData.Remove("fieldID");
+        ViewData.Remove("fieldValueIndex");
+    }
+
+}).Bind(Model).GetHtml()
