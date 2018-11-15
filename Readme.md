@@ -1,3 +1,12 @@
+<!-- default file list -->
+*Files to look at*:
+
+* [HomeController.cs](./CS/MvcApplication1/Controllers/HomeController.cs)
+* [PivotEventHelper.cs](./CS/MvcApplication1/Helper/PivotEventHelper.cs)
+* [pivotMenu.js](./CS/MvcApplication1/Scripts/pivotMenu.js)
+* [_PivotGridPartial.cshtml](./CS/MvcApplication1/Views/Home/_PivotGridPartial.cshtml)
+* [Index.cshtml](./CS/MvcApplication1/Views/Home/Index.cshtml)
+<!-- default file list end -->
 # How to show a popup context menu's custom items only for certain fields in an MVC solution
 
 
