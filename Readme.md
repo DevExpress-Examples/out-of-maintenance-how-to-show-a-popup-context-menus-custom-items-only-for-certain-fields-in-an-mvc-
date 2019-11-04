@@ -9,7 +9,7 @@
 <!-- default file list end -->
 # How to show a popup context menu's custom items only for certain fields in an MVC solution
 <!-- run online -->
-**[[Run Online]](https://codecentral.devexpress.com/t431251)**
+**[[Run Online]](https://codecentral.devexpress.com/t431251/)**
 <!-- run online end -->
 
 
