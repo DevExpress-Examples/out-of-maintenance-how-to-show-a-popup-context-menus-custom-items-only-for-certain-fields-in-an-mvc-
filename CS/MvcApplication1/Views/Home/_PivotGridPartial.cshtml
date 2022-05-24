@@ -5,10 +5,10 @@
 {
     settings.Name = "pivotGrid";
     settings.CallbackRouteValues = new { Controller = "Home", Action = "PivotGridPartial" };
-
-    settings.Fields.Add("Row", PivotArea.RowArea);
-    settings.Fields.Add("Column", PivotArea.ColumnArea);
-    settings.Fields.Add("Data", PivotArea.DataArea);
+    settings.OptionsData.DataProcessingEngine = PivotDataProcessingEngine.Optimized;
+    settings.Fields.AddDataSourceColumn("Row", PivotArea.RowArea);
+    settings.Fields.AddDataSourceColumn("Column", PivotArea.ColumnArea);
+    settings.Fields.AddDataSourceColumn("Data", PivotArea.DataArea);
     settings.ClientSideEvents.PopupMenuItemClick = "MenuItemClick";
 
     PivotEventHelper.CustomizeContextMenu(settings);
